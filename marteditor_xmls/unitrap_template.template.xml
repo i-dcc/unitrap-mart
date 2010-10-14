@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE DatasetConfig>
+<DatasetConfig dataset="unitrap_template" displayName="UniTrap" interfaces="default" internalName="template" martUsers="default" modified="2010-10-14 09:31:34.205" softwareVersion="0.6" template="unitrap" type="TableSet" visible="1">
+  <DynamicDataset internalName="unitrap"/>
+  <MainTable>unitrap__gene__main</MainTable>
+  <MainTable>unitrap__unitrap__main</MainTable>
+  <MainTable>unitrap__trap_unitrap__main</MainTable>
+  <Key>region_id_1020_key</Key>
+  <Key>unitrap_id_1015_key</Key>
+  <Key>trap_unitrap_id_1011_key</Key>
+  <Importable filters="ensembl_gene_id" internalName="ensembl_gene_id" linkName="ensembl_gene_id" name="ensembl_gene_id" type="link"/>
+  <Exportable attributes="ensembl_gene_id" internalName="ensembl_gene_id" linkName="ensembl_gene_id" name="ensembl_gene_id" type="link"/>
+  <FilterPage displayName="Filters" internalName="filters">
+    <FilterGroup displayName="Genomic Location" internalName="genomic_location">
+      <FilterCollection displayName="Identifiers" internalName="identifiers">
+        <FilterDescription displayType="container" internalName="identifier_filters" type="id_list">
+          <Option displayName="Marker Symbol" displayType="text" field="marker_symbol" internalName="marker_symbol" isSelectable="true" key="region_id_1020_key" legal_qualifiers="=" multipleValues="1" qualifier="=" tableConstraint="main" type="text"/>
+          <Option displayName="Ensembl Gene ID" displayType="text" field="ensembl_gene_id" internalName="ensembl_gene_id" isSelectable="true" key="region_id_1020_key" legal_qualifiers="=" multipleValues="1" qualifier="=" tableConstraint="main" type="text"/>
+          <Option displayName="RefSeq ID" displayType="text" field="refseq_id" internalName="refseq_id" isSelectable="true" key="region_id_1020_key" legal_qualifiers="=" multipleValues="1" qualifier="=" tableConstraint="main" type="text"/>
+          <Option displayName="Genbank Accession ID" displayType="text" field="genbank_accession_id" internalName="genbank_accession_id" isSelectable="true" key="trap_unitrap_id_1011_key" legal_qualifiers="=" multipleValues="1" qualifier="=" tableConstraint="main" type="text"/>
+          <Option displayName="dbGSS ID" displayType="text" field="dbgss_id" internalName="dbgss_id" isSelectable="true" key="trap_unitrap_id_1011_key" legal_qualifiers="=" multipleValues="1" qualifier="=" tableConstraint="main" type="text"/>
+        </FilterDescription>
+      </FilterCollection>
+      <FilterCollection displayName="Molecule Type" internalName="molecule_type">
+        <FilterDescription displayName="Molecule Type" displayType="list" field="molecule_type" internalName="molecule_type" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" style="menu" tableConstraint="main" type="list">
+          <Option displayName="Genomic DNA" internalName="genomic_DNA" isSelectable="true" value="genomic DNA"/>
+          <Option displayName="mRNA" internalName="mRNA" isSelectable="true" value="mRNA"/>
+        </FilterDescription>
+      </FilterCollection>
+      <FilterCollection displayName="Chromosome" internalName="chromosome">
+        <FilterDescription displayName="Chromosome" displayType="list" field="chromosome" internalName="chromosome" key="region_id_1020_key" legal_qualifiers="=" multipleValues="1" qualifier="=" style="menu" tableConstraint="main" type="list">
+          <Option displayName="1" internalName="1" isSelectable="true" value="1"/>
+          <Option displayName="2" internalName="2" isSelectable="true" value="2"/>
+          <Option displayName="3" internalName="3" isSelectable="true" value="3"/>
+          <Option displayName="4" internalName="4" isSelectable="true" value="4"/>
+          <Option displayName="5" internalName="5" isSelectable="true" value="5"/>
+          <Option displayName="6" internalName="6" isSelectable="true" value="6"/>
+          <Option displayName="7" internalName="7" isSelectable="true" value="7"/>
+          <Option displayName="8" internalName="8" isSelectable="true" value="8"/>
+          <Option displayName="9" internalName="9" isSelectable="true" value="9"/>
+          <Option displayName="10" internalName="10" isSelectable="true" value="10"/>
+          <Option displayName="11" internalName="11" isSelectable="true" value="11"/>
+          <Option displayName="12" internalName="12" isSelectable="true" value="12"/>
+          <Option displayName="13" internalName="13" isSelectable="true" value="13"/>
+          <Option displayName="14" internalName="14" isSelectable="true" value="14"/>
+          <Option displayName="15" internalName="15" isSelectable="true" value="15"/>
+          <Option displayName="16" internalName="16" isSelectable="true" value="16"/>
+          <Option displayName="17" internalName="17" isSelectable="true" value="17"/>
+          <Option displayName="18" internalName="18" isSelectable="true" value="18"/>
+          <Option displayName="19" internalName="19" isSelectable="true" value="19"/>
+          <Option displayName="X" internalName="X" isSelectable="true" value="X"/>
+          <Option displayName="Y" internalName="Y" isSelectable="true" value="Y"/>
+        </FilterDescription>
+      </FilterCollection>
+      <FilterCollection displayName="Gene Start" internalName="gene_start">
+        <FilterDescription displayName="Gene Start" displayType="text" field="gene_start" internalName="gene_start" key="region_id_1020_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+      </FilterCollection>
+      <FilterCollection displayName="Gene End" internalName="gene_end">
+        <FilterDescription displayName="Gene End" displayType="text" field="gene_end" internalName="gene_end" key="region_id_1020_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+      </FilterCollection>
+      <FilterCollection displayName="Strand" internalName="strand">
+        <FilterDescription displayName="Strand" displayType="list" field="strand" internalName="strand" key="region_id_1020_key" legal_qualifiers="=" qualifier="=" style="menu" tableConstraint="main" type="list">
+          <Option displayName="+" internalName="1" isSelectable="true" value="1"/>
+          <Option displayName="-" internalName="-1" isSelectable="true" value="-1"/>
+        </FilterDescription>
+      </FilterCollection>
+    </FilterGroup>
+    <FilterGroup displayName="Trap Details" internalName="trap_details">
+      <FilterCollection displayName="UniTrap Accession ID" internalName="unitrap_accession_id">
+        <FilterDescription displayName="UniTrap Accession ID" displayType="text" field="unitrap_accession_id" internalName="unitrap_accession_id" key="unitrap_id_1015_key" legal_qualifiers="=" multipleValues="1" qualifier="=" tableConstraint="main" type="text"/>
+      </FilterCollection>
+      <FilterCollection displayName="UniTrap Position" internalName="unitrap_position">
+        <FilterDescription displayName="Unitrap Start" displayType="text" field="unitrap_start" internalName="unitrap_start" key="unitrap_id_1015_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Unitrap End" displayType="text" field="unitrap_end" internalName="unitrap_end" key="unitrap_id_1015_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Unitrap Start (&lt;=)" displayType="text" field="unitrap_start" hideDisplay="true" internalName="unitrap_start_lte" key="unitrap_id_1015_key" legal_qualifiers="&lt;=" qualifier="&lt;=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Unitrap End (&lt;=)" displayType="text" field="unitrap_end" hideDisplay="true" internalName="unitrap_end_lte" key="unitrap_id_1015_key" legal_qualifiers="&lt;=" qualifier="&lt;=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Unitrap Start (&gt;=)" displayType="text" field="unitrap_start" hideDisplay="true" internalName="unitrap_start_gte" key="unitrap_id_1015_key" legal_qualifiers="&gt;=" qualifier="&gt;=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Unitrap End (&gt;=)" displayType="text" field="unitrap_end" hideDisplay="true" internalName="unitrap_end_gte" key="unitrap_id_1015_key" legal_qualifiers="&gt;=" qualifier="&gt;=" tableConstraint="main" type="text"/>
+      </FilterCollection>
+      <FilterCollection displayName="Project" internalName="project">
+        <FilterDescription displayName="Project" displayType="list" field="project" internalName="project" key="trap_unitrap_id_1011_key" legal_qualifiers="=" multipleValues="1" qualifier="=" style="menu" tableConstraint="main" type="list">
+          <Option displayName="TIGEM" internalName="TIGEM" isSelectable="true" value="TIGEM"/>
+          <Option displayName="TIGM" internalName="TIGM" isSelectable="true" value="TIGM"/>
+          <Option displayName="WTSI" internalName="WTSI" isSelectable="true" value="WTSI"/>
+        </FilterDescription>
+      </FilterCollection>
+      <FilterCollection displayName="Design Type" internalName="design_type">
+        <FilterDescription displayName="Design type" displayType="list" field="design_type" internalName="design_type" key="trap_unitrap_id_1011_key" legal_qualifiers="=" multipleValues="1" qualifier="=" style="menu" tableConstraint="main" type="list">
+          <Option displayName="3' RACE" internalName="3'_RACE" isSelectable="true" value="3' RACE"/>
+          <Option displayName="5' RACE" internalName="5'_RACE" isSelectable="true" value="5' RACE"/>
+        </FilterDescription>
+      </FilterCollection>
+      <FilterCollection displayName="ES Cell Line" internalName="escell_line">
+        <FilterDescription displayName="ES Cell Line" displayType="list" field="escell_line" internalName="escell_line" key="trap_unitrap_id_1011_key" legal_qualifiers="=" multipleValues="1" qualifier="=" style="menu" tableConstraint="main" type="list">
+          <Option displayName="E14Tg2A.4" internalName="E14Tg2A.4" isSelectable="true" value="E14Tg2A.4"/>
+        </FilterDescription>
+      </FilterCollection>
+      <FilterCollection displayName="ES Cell Strain" internalName="escell_strain">
+        <FilterDescription displayName="ES Cell Strain" displayType="list" field="escell_strain" internalName="escell_strain" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" style="menu" tableConstraint="main" type="list"/>
+      </FilterCollection>
+      <FilterCollection displayName="ES Cell Clone" internalName="escell_clone">
+        <FilterDescription displayName="ES Cell Clone" displayType="text" field="escell_clone" internalName="escell_clone" key="trap_unitrap_id_1011_key" legal_qualifiers="=" multipleValues="1" qualifier="=" tableConstraint="main" type="text"/>
+      </FilterCollection>
+    </FilterGroup>
+  </FilterPage>
+  <FilterPage displayName="Unused Filters" hidden="true" hideDisplay="true" internalName="unused_filters">
+    <FilterGroup displayName="FILTERS" hidden="true" hideDisplay="true" internalName="filters">
+      <FilterCollection displayName="gene" hidden="true" hideDisplay="true" internalName="gene">
+        <FilterDescription displayName="Biotype" displayType="text" field="biotype" hidden="true" hideDisplay="true" internalName="biotype" key="region_id_1020_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Unitrap count" displayType="text" field="unitrap_count" hidden="true" hideDisplay="true" internalName="unitrap_count" key="region_id_1020_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+      </FilterCollection>
+      <FilterCollection displayName="unitrap" hidden="true" hideDisplay="true" internalName="unitrap">
+        <FilterDescription displayName="Assembly" displayType="text" field="assembly" hidden="true" hideDisplay="true" internalName="assembly" key="unitrap_id_1015_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Ambiguous" displayType="text" field="ambiguous" hidden="true" hideDisplay="true" internalName="ambiguous" key="unitrap_id_1015_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Trap unitrap count" displayType="text" field="trap_unitrap_count" hidden="true" hideDisplay="true" internalName="trap_unitrap_count" key="unitrap_id_1015_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+      </FilterCollection>
+      <FilterCollection displayName="trap unitrap" hidden="true" hideDisplay="true" internalName="trap_unitrap">
+        <FilterDescription displayName="Trap id 1011" displayType="text" field="trap_id_1011" hidden="true" hideDisplay="true" internalName="trap_id_1011" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Trapblock id 1011" displayType="text" field="trapblock_id_1011" hidden="true" hideDisplay="true" internalName="trapblock_id_1011" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Trap name" displayType="text" field="trap_name" hidden="true" hideDisplay="true" internalName="trap_name" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="N percent masked" displayType="text" field="n_percent_masked" hidden="true" hideDisplay="true" internalName="n_percent_masked" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="X masked seq" displayType="text" field="x_masked_seq" hidden="true" hideDisplay="true" internalName="x_masked_seq" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Max frag length n splitted" displayType="text" field="max_frag_length_n_splitted" hidden="true" hideDisplay="true" internalName="max_frag_length_n_splitted" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="X percent masked" displayType="text" field="x_percent_masked" hidden="true" hideDisplay="true" internalName="x_percent_masked" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Seq length not n" displayType="text" field="seq_length_not_n" hidden="true" hideDisplay="true" internalName="seq_length_not_n" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Sequencing direction" displayType="text" field="sequencing_direction" hidden="true" hideDisplay="true" internalName="sequencing_direction" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Esclone id 1010" displayType="text" field="esclone_id_1010" hidden="true" hideDisplay="true" internalName="esclone_id_1010" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Xrepeat" displayType="text" field="xrepeat" hidden="true" hideDisplay="true" internalName="xrepeat" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Nrepeat" displayType="text" field="nrepeat" hidden="true" hideDisplay="true" internalName="nrepeat" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Sequence" displayType="text" field="sequence" hidden="true" hideDisplay="true" internalName="sequence" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Genbank id" displayType="text" field="genbank_id" hidden="true" hideDisplay="true" internalName="genbank_id" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Seq length" displayType="text" field="seq_length" hidden="true" hideDisplay="true" internalName="seq_length" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Vector name" displayType="text" field="vector_name" hidden="true" hideDisplay="true" internalName="vector_name" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Vector type" displayType="text" field="vector_type" hidden="true" hideDisplay="true" internalName="vector_type" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Project notes" displayType="text" field="project_notes" hidden="true" hideDisplay="true" internalName="project_notes" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+        <FilterDescription displayName="Project url" displayType="text" field="project_url" hidden="true" hideDisplay="true" internalName="project_url" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" tableConstraint="main" type="text"/>
+      </FilterCollection>
+    </FilterGroup>
+  </FilterPage>
+  <AttributePage displayName="Attributes" internalName="attributes" outFormats="html,txt,csv,tsv">
+    <AttributeGroup displayName="Features" internalName="features">
+      <AttributeCollection displayName="Gene Information" enableSelectAll="true" internalName="gene_information" maxSelect="0">
+        <AttributeDescription default="true" displayName="Marker Symbol" field="marker_symbol" internalName="marker_symbol" key="region_id_1020_key" linkoutURL="http://www.knockoutmouse.org/search_results?criteria=%s" maxLength="255" tableConstraint="main"/>
+        <AttributeDescription default="true" displayName="Ensembl Gene ID" field="ensembl_gene_id" internalName="ensembl_gene_id" key="region_id_1020_key" linkoutURL="http://www.ensembl.org/Mus_musculus/Location/View?g=%s;contigviewbottom=das:http://das.sanger.ac.uk/das/ikmc_products=normal" maxLength="255" tableConstraint="main"/>
+        <AttributeDescription displayName="RefSeq ID" field="refseq_id" internalName="refseq_id" key="region_id_1020_key" maxLength="40" tableConstraint="main"/>
+        <AttributeDescription displayName="Assembly" field="assembly" internalName="assembly" key="unitrap_id_1015_key" maxLength="40" tableConstraint="main"/>
+        <AttributeDescription displayName="Chromosome" field="chromosome" internalName="chromosome" key="region_id_1020_key" maxLength="40" tableConstraint="main"/>
+        <AttributeDescription displayName="Gene Start" field="gene_start" internalName="gene_start" key="region_id_1020_key" maxLength="10" tableConstraint="main"/>
+        <AttributeDescription displayName="Gene End" field="gene_end" internalName="gene_end" key="region_id_1020_key" maxLength="10" tableConstraint="main"/>
+        <AttributeDescription displayName="Strand" field="strand" internalName="strand" key="region_id_1020_key" maxLength="3" tableConstraint="main"/>
+        <AttributeDescription displayName="Molecule Type" field="molecule_type" internalName="molecule_type" key="trap_unitrap_id_1011_key" maxLength="40" tableConstraint="main"/>
+        <AttributeDescription displayName="Biotype" field="biotype" internalName="biotype" key="region_id_1020_key" maxLength="10" tableConstraint="main"/>
+      </AttributeCollection>
+      <AttributeCollection displayName="Exon Information" enableSelectAll="true" internalName="exon_information" maxSelect="0">
+        <AttributeDescription displayName="Ensembl Exon ID" field="ensembl_exon_id" internalName="ensembl_exon_id" key="trap_unitrap_id_1011_key" linkoutURL="http://www.ensembl.org/Mus_musculus/Search/Results?species=Mus_musculus;idx=;q=%s" maxLength="255" tableConstraint="trapblock_annotation__dm"/>
+        <AttributeDescription displayName="Exon Start" field="exon_start" internalName="exon_start" key="trap_unitrap_id_1011_key" maxLength="10" tableConstraint="trapblock_annotation__dm"/>
+        <AttributeDescription displayName="Exon End" field="exon_end" internalName="exon_end" key="trap_unitrap_id_1011_key" maxLength="10" tableConstraint="trapblock_annotation__dm"/>
+        <AttributeDescription displayName="Exon Rank" field="exon_rank" internalName="exon_rank" key="trap_unitrap_id_1011_key" maxLength="10" tableConstraint="trapblock_annotation__dm"/>
+      </AttributeCollection>
+      <AttributeCollection displayName="Trap Overview" enableSelectAll="true" internalName="trap_overview" maxSelect="0">
+        <AttributeDescription default="true" displayName="UniTrap Accession ID" field="unitrap_accession_id" internalName="unitrap_accession_id" key="unitrap_id_1015_key" linkoutURL="http://www.knockoutmouse.org/martsearch/search?query=%s" maxLength="40" tableConstraint="main"/>
+        <AttributeDescription displayName="UniTrap Start" field="unitrap_start" internalName="unitrap_start" key="unitrap_id_1015_key" maxLength="10" tableConstraint="main"/>
+        <AttributeDescription displayName="UniTrap End" field="unitrap_end" internalName="unitrap_end" key="unitrap_id_1015_key" maxLength="10" tableConstraint="main"/>
+        <AttributeDescription displayName="Number of Traps" field="trap_unitrap_count" internalName="no_of_traps" key="unitrap_id_1015_key" maxLength="10" tableConstraint="main"/>
+        <AttributeDescription displayName="Intronic?" field="intronic" internalName="intronic" key="trap_unitrap_id_1011_key" maxLength="0" tableConstraint="trapblock_annotation__dm"/>
+        <AttributeDescription displayName="dbGSS ID" field="dbgss_id" internalName="dbgss_id" key="trap_unitrap_id_1011_key" linkoutURL="http://www.ncbi.nlm.nih.gov/nucgss/%s" maxLength="10" tableConstraint="main"/>
+        <AttributeDescription default="true" displayName="GenBank ID" field="genbank_id" internalName="genbank_id" key="trap_unitrap_id_1011_key" linkoutURL="http://www.ncbi.nlm.nih.gov/nucgss/%s" maxLength="10" tableConstraint="main"/>
+        <AttributeDescription default="true" displayName="GenBank Accession ID" field="genbank_accession_id" internalName="genbank_accession_id" key="trap_unitrap_id_1011_key" maxLength="30" tableConstraint="main"/>
+        <AttributeDescription displayName="UniTrap Rank" field="unitrap_rank" internalName="unitrap_rank" key="trap_unitrap_id_1011_key" maxLength="12" tableConstraint="trapblock_annotation__dm"/>
+        <AttributeDescription default="true" displayName="Project" field="project" internalName="project" key="trap_unitrap_id_1011_key" maxLength="40" tableConstraint="main"/>
+        <AttributeDescription displayName="Project URL" field="project_url" internalName="project_url" key="trap_unitrap_id_1011_key" linkoutURL="%s" maxLength="250" tableConstraint="main"/>
+        <AttributeDescription displayName="Project Notes" field="project_notes" internalName="project_notes" key="trap_unitrap_id_1011_key" maxLength="255" tableConstraint="main"/>
+        <AttributeDescription displayName="Design Type" field="design_type" internalName="design_type" key="trap_unitrap_id_1011_key" maxLength="255" tableConstraint="main"/>
+        <AttributeDescription displayName="Trap Name" field="trap_name" internalName="trap_name" key="trap_unitrap_id_1011_key" maxLength="40" tableConstraint="main"/>
+        <AttributeDescription displayName="Vector Name" field="vector_name" internalName="vector_name" key="trap_unitrap_id_1011_key" maxLength="40" tableConstraint="main"/>
+        <AttributeDescription displayName="Vector Type" field="vector_type" internalName="vector_type" key="trap_unitrap_id_1011_key" maxLength="40" tableConstraint="main"/>
+        <AttributeDescription default="true" displayName="ES Cell Clone" field="escell_clone" internalName="escell_clone" key="trap_unitrap_id_1011_key" linkoutURL="http://www.knockoutmouse.org/martsearch/search?query=%s" maxLength="255" tableConstraint="main"/>
+        <AttributeDescription displayName="ES Cell Line" field="escell_line" internalName="escell_line" key="trap_unitrap_id_1011_key" maxLength="40" tableConstraint="main"/>
+        <AttributeDescription displayName="ES Cell Strain" field="escell_strain" internalName="escell_strain" key="trap_unitrap_id_1011_key" maxLength="40" tableConstraint="main"/>
+      </AttributeCollection>
+      <AttributeCollection displayName="Trap Details" enableSelectAll="true" internalName="trap_details" maxSelect="0">
+        <AttributeDescription displayName="Sequencing Direction" field="sequencing_direction" internalName="sequencing_direction" key="trap_unitrap_id_1011_key" maxLength="2" tableConstraint="main"/>
+        <AttributeDescription displayName="Sequence" field="sequence" internalName="sequence" key="trap_unitrap_id_1011_key" maxLength="255" tableConstraint="main"/>
+        <AttributeDescription displayName="Sequence Length" field="seq_length" internalName="sequence_length" key="trap_unitrap_id_1011_key" maxLength="10" tableConstraint="main"/>
+        <AttributeDescription displayName="Sequence Length Not N" field="seq_length_not_n" internalName="sequence_length_not_n" key="trap_unitrap_id_1011_key" maxLength="10" tableConstraint="main"/>
+        <AttributeDescription displayName="Max. Fragment Length N Splitted" field="max_frag_length_n_splitted" internalName="max_frag_length_n_splitted" key="trap_unitrap_id_1011_key" maxLength="10" tableConstraint="main"/>
+        <AttributeDescription displayName="N Percent Masked" field="n_percent_masked" internalName="n_percent_masked" key="trap_unitrap_id_1011_key" maxLength="10" tableConstraint="main"/>
+        <AttributeDescription displayName="X Percent Masked" field="x_percent_masked" internalName="x_percent_masked" key="trap_unitrap_id_1011_key" maxLength="10" tableConstraint="main"/>
+        <AttributeDescription displayName="X Masked Sequence" field="x_masked_seq" internalName="x_masked_sequence" key="trap_unitrap_id_1011_key" maxLength="255" tableConstraint="main"/>
+        <AttributeDescription displayName="N-Repeat" field="nrepeat" internalName="nrepeat" key="trap_unitrap_id_1011_key" maxLength="10" tableConstraint="main"/>
+        <AttributeDescription displayName="X-Repeat" field="xrepeat" internalName="xrepeat" key="trap_unitrap_id_1011_key" maxLength="10" tableConstraint="main"/>
+        <AttributeDescription displayName="Ambiguous?" field="ambiguous" internalName="ambiguous" key="unitrap_id_1015_key" maxLength="0" tableConstraint="main"/>
+      </AttributeCollection>
+    </AttributeGroup>
+  </AttributePage>
+  <AttributePage displayName="Unused Attributes" hidden="true" hideDisplay="true" internalName="unused_attributes" outFormats="html,txt,csv,tsv">
+    <AttributeGroup displayName="FEATURES" hidden="true" hideDisplay="true" internalName="features">
+      <AttributeCollection displayName="gene" hidden="true" hideDisplay="true" internalName="gene">
+        <AttributeDescription displayName="Unitrap count" field="unitrap_count" hidden="true" hideDisplay="true" internalName="unitrap_count" key="region_id_1020_key" maxLength="10" tableConstraint="main"/>
+      </AttributeCollection>
+      <AttributeCollection displayName="unitrap" hidden="true" hideDisplay="true" internalName="unitrap"/>
+      <AttributeCollection displayName="trap unitrap" hidden="true" hideDisplay="true" internalName="trap_unitrap">
+        <AttributeDescription displayName="Trap id 1011" field="trap_id_1011" hidden="true" hideDisplay="true" internalName="trap_id_1011" key="trap_unitrap_id_1011_key" maxLength="10" tableConstraint="main"/>
+        <AttributeDescription displayName="Trapblock id 1011" field="trapblock_id_1011" hidden="true" hideDisplay="true" internalName="trapblock_id_1011" key="trap_unitrap_id_1011_key" maxLength="10" tableConstraint="main"/>
+        <AttributeDescription displayName="Esclone id 1010" field="esclone_id_1010" hidden="true" hideDisplay="true" internalName="esclone_id_1010" key="trap_unitrap_id_1011_key" maxLength="10" tableConstraint="main"/>
+      </AttributeCollection>
+      <AttributeCollection displayName="trapblock annotation" hidden="true" hideDisplay="true" internalName="trapblock_annotation">
+        <AttributeDescription displayName="Comment" field="comment" hidden="true" hideDisplay="true" internalName="comment" key="trap_unitrap_id_1011_key" maxLength="255" tableConstraint="trapblock_annotation__dm"/>
+        <AttributeDescription displayName="Coverage" field="coverage" hidden="true" hideDisplay="true" internalName="coverage" key="trap_unitrap_id_1011_key" maxLength="12" tableConstraint="trapblock_annotation__dm"/>
+        <AttributeDescription displayName="Region id 1022" field="region_id_1022" hidden="true" hideDisplay="true" internalName="region_id_1022" key="trap_unitrap_id_1011_key" maxLength="10" tableConstraint="trapblock_annotation__dm"/>
+        <AttributeDescription displayName="Trapblock id 1011" field="trapblock_id_1011" hidden="true" hideDisplay="true" internalName="trapblock_annotation__dm_trapblock_id_1011" key="trap_unitrap_id_1011_key" maxLength="10" tableConstraint="trapblock_annotation__dm"/>
+        <AttributeDescription displayName="Trapblock annotation id 1022" field="trapblock_annotation_id_1022" hidden="true" hideDisplay="true" internalName="trapblock_annotation_id_1022" key="trap_unitrap_id_1011_key" maxLength="10" tableConstraint="trapblock_annotation__dm"/>
+        <AttributeDescription displayName="Flanking exon id 1022" field="flanking_exon_id_1022" hidden="true" hideDisplay="true" internalName="flanking_exon_id_1022" key="trap_unitrap_id_1011_key" maxLength="10" tableConstraint="trapblock_annotation__dm"/>
+      </AttributeCollection>
+    </AttributeGroup>
+  </AttributePage>
+</DatasetConfig>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mart PUBLIC "-//EBI//DTD MartBuilder 0.7-//EBI//DTD MartBuilder " "http://www.biomart.org/DTD/MartBuilder-0.7.dtd">
+<mart outputDatabase="ikmc_unitrap_mart" outputSchema="ikmc_unitrap_mart" nameCase="2" hideMaskedDataSets="false" hideMaskedSchemas="false">
+	<jdbcSchema uniqueId="1" driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:13304/ikmc_unitrapcore" databaseName="ikmc_unitrapcore" schemaName="ikmc_unitrapcore" username="ikmc" password="ikmc" name="ikmc_unitrapcore" keyguessing="false" masked="false" hideMasked="false">
+		<table uniqueId="8" id="1" name="region" ignore="false">
+			<column id="2" name="region_start" visibleModified="false"/>
+			<column id="3" name="region_name" visibleModified="false"/>
+			<column id="4" name="rank" visibleModified="false"/>
+			<column id="5" name="external_name" visibleModified="false"/>
+			<column id="6" name="description" visibleModified="false"/>
+			<column id="7" name="biotype" visibleModified="false"/>
+			<column id="8" name="region_id" visibleModified="false"/>
+			<column id="9" name="seq_id" visibleModified="false"/>
+			<column id="10" name="region_end" visibleModified="false"/>
+			<column id="11" name="region_strand" visibleModified="false"/>
+			<column id="12" name="refseq_id" visibleModified="false"/>
+			<column id="13" name="parent_id" visibleModified="false"/>
+			<primaryKey id="14" columnIds="8" status="INFERRED" visibleModified="false"/>
+		</table>
+		<table uniqueId="20" id="15" name="gene" ignore="false">
+			<column id="16" name="region_start" visibleModified="false"/>
+			<column id="17" name="region_name" visibleModified="false"/>
+			<column id="18" name="rank" visibleModified="false"/>
+			<column id="19" name="external_name" visibleModified="false"/>
+			<column id="20" name="description" visibleModified="false"/>
+			<column id="21" name="biotype" visibleModified="false"/>
+			<column id="22" name="region_id" visibleModified="false"/>
+			<column id="23" name="seq_id" visibleModified="false"/>
+			<column id="24" name="region_end" visibleModified="false"/>
+			<column id="25" name="region_strand" visibleModified="false"/>
+			<column id="26" name="refseq_id" visibleModified="false"/>
+			<column id="27" name="parent_id" visibleModified="false"/>
+			<primaryKey id="28" columnIds="22" status="HANDMADE" visibleModified="false"/>
+		</table>
+		<table uniqueId="4" id="29" name="logic_name" ignore="true">
+			<column id="30" name="name" visibleModified="false"/>
+			<column id="31" name="logic_name_id" visibleModified="false"/>
+			<primaryKey id="32" columnIds="31" status="INFERRED" visibleModified="false"/>
+		</table>
+		<table uniqueId="3" id="33" name="genbank_features" ignore="true">
+			<column id="34" name="esclone_id" visibleModified="false"/>
+			<column id="35" name="genbank_features_id" visibleModified="false"/>
+			<column id="36" name="tagname" visibleModified="false"/>
+			<primaryKey id="37" columnIds="35" status="INFERRED" visibleModified="false"/>
+		</table>
+		<table uniqueId="10" id="38" name="trap" ignore="false">
+			<column id="39" name="trap_id" visibleModified="false"/>
+			<column id="40" name="trap_name" visibleModified="false"/>
+			<column id="41" name="n_percent_masked" visibleModified="false"/>
+			<column id="42" name="x_masked_seq" visibleModified="false"/>
+			<column id="43" name="max_frag_length_N_splitted" visibleModified="false"/>
+			<column id="44" name="x_percent_masked" visibleModified="false"/>
+			<column id="45" name="timestp" visibleModified="false"/>
+			<column id="46" name="gss_id" visibleModified="false"/>
+			<column id="47" name="seq_length_not_N" visibleModified="false"/>
+			<column id="48" name="sequencing_direction" visibleModified="false"/>
+			<column id="49" name="esclone_id" visibleModified="false"/>
+			<column id="50" name="paired_tag_id" visibleModified="false"/>
+			<column id="51" name="xrepeat" visibleModified="false"/>
+			<column id="52" name="nrepeat" visibleModified="false"/>
+			<column id="53" name="gb_locus" visibleModified="false"/>
+			<column id="54" name="sequence" visibleModified="false"/>
+			<column id="55" name="gb_id" visibleModified="false"/>
+			<column id="56" name="seq_length" visibleModified="false"/>
+			<column id="57" name="mol_type" visibleModified="false"/>
+			<foreignKey id="58" columnIds="49" status="HANDMADE" visibleModified="false"/>
+			<primaryKey id="59" columnIds="39" status="INFERRED" visibleModified="false"/>
+		</table>
+		<table uniqueId="21" id="60" name="insertion" ignore="false">
+			<column id="61" name="trap_id" visibleModified="false"/>
+			<column id="62" name="insertion_id" visibleModified="false"/>
+			<column id="63" name="region_start" visibleModified="false"/>
+			<column id="64" name="insertion_ambiguous" visibleModified="false"/>
+			<column id="65" name="putative_insertion_end" visibleModified="false"/>
+			<column id="66" name="insertion_case" visibleModified="false"/>
+			<column id="67" name="trapblock_id" visibleModified="false"/>
+			<column id="68" name="trapmap_id" visibleModified="false"/>
+			<column id="69" name="putative_insertion_start" visibleModified="false"/>
+			<column id="70" name="gene_id" visibleModified="false"/>
+			<column id="71" name="region_end" visibleModified="false"/>
+			<primaryKey id="72" columnIds="62" status="INFERRED" visibleModified="false"/>
+		</table>
+		<table uniqueId="7" id="73" name="project" ignore="false">
+			<column id="74" name="project_name" visibleModified="false"/>
+			<column id="75" name="wordkey" visibleModified="false"/>
+			<column id="76" name="project_id" visibleModified="false"/>
+			<column id="77" name="note" visibleModified="false"/>
+			<column id="78" name="url" visibleModified="false"/>
+			<column id="79" name="private" visibleModified="false"/>
+			<primaryKey id="80" columnIds="76" status="INFERRED" visibleModified="false"/>
+		</table>
+		<table uniqueId="2" id="81" name="esclone" ignore="false">
+			<column id="82" name="vector_name" visibleModified="false"/>
+			<column id="83" name="clone" visibleModified="false"/>
+			<column id="84" name="esclone_id" visibleModified="false"/>
+			<column id="85" name="strain" visibleModified="false"/>
+			<column id="86" name="project_id" visibleModified="false"/>
+			<column id="87" name="design_type" visibleModified="false"/>
+			<column id="88" name="cell_line" visibleModified="false"/>
+			<column id="89" name="vector_type" visibleModified="false"/>
+			<column id="90" name="clone_genbank_id" visibleModified="false"/>
+			<foreignKey id="91" columnIds="86" status="HANDMADE" visibleModified="false"/>
+			<primaryKey id="92" columnIds="84" status="INFERRED" visibleModified="false"/>
+		</table>
+		<table uniqueId="11" id="93" name="trap_unitrap" ignore="false">
+			<column id="94" name="trap_id" visibleModified="false"/>
+			<column id="95" name="trapblock_id" visibleModified="false"/>
+			<column id="96" name="unitrap_id" visibleModified="false"/>
+			<column id="97" name="trap_unitrap_id" visibleModified="false"/>
+			<foreignKey id="98" columnIds="96" status="HANDMADE" visibleModified="false"/>
+			<foreignKey id="99" columnIds="94" status="HANDMADE" visibleModified="false"/>
+			<foreignKey id="100" columnIds="95" status="HANDMADE" visibleModified="false"/>
+			<primaryKey id="101" columnIds="97" status="INFERRED" visibleModified="false"/>
+		</table>
+		<table uniqueId="15" id="102" name="unitrap" ignore="false">
+			<column id="103" name="hit_db" visibleModified="false"/>
+			<column id="104" name="start" visibleModified="false"/>
+			<column id="105" name="region_id" visibleModified="false"/>
+			<column id="106" name="accession" visibleModified="false"/>
+			<column id="107" name="unitrap_id" visibleModified="false"/>
+			<column id="108" name="ambiguous" visibleModified="false"/>
+			<column id="109" name="end" visibleModified="false"/>
+			<column id="110" name="chr" visibleModified="false"/>
+			<foreignKey id="111" columnIds="105" status="HANDMADE" visibleModified="false"/>
+			<primaryKey id="112" columnIds="107" status="INFERRED" visibleModified="false"/>
+		</table>
+		<table uniqueId="22" id="113" name="trapblock_annotation" ignore="false">
+			<column id="114" name="trapblock_id" visibleModified="false"/>
+			<column id="115" name="region_id" visibleModified="false"/>
+			<column id="116" name="flanking_exon_id" visibleModified="false"/>
+			<column id="117" name="dE_e" visibleModified="false"/>
+			<column id="118" name="display_name" visibleModified="false"/>
+			<column id="119" name="rank" visibleModified="false"/>
+			<column id="120" name="intronic" visibleModified="false"/>
+			<column id="121" name="label_logic_name_id" visibleModified="false"/>
+			<column id="122" name="coverage" visibleModified="false"/>
+			<column id="123" name="dS_s" visibleModified="false"/>
+			<column id="124" name="trapblock_annotation_id" visibleModified="false"/>
+			<column id="125" name="comment" visibleModified="false"/>
+			<column id="126" name="source_logic_name_id" visibleModified="false"/>
+			<foreignKey id="127" columnIds="114" status="HANDMADE" visibleModified="false"/>
+			<foreignKey id="128" columnIds="116" status="HANDMADE" visibleModified="false"/>
+			<primaryKey id="129" columnIds="124" status="INFERRED" visibleModified="false"/>
+		</table>
+		<relation id="130" cardinality="M(b)" originalCardinality="M(b)" firstKeyId="128" secondKeyId="14" status="HANDMADE" visibleModified="false"/>
+		<relation id="131" cardinality="M(a)" originalCardinality="M(a)" firstKeyId="100" secondKeyId="127" status="HANDMADE" visibleModified="false"/>
+		<relation id="132" cardinality="1" originalCardinality="M(b)" firstKeyId="58" secondKeyId="92" status="HANDMADE" visibleModified="false"/>
+		<relation id="133" cardinality="M(a)" originalCardinality="M(a)" firstKeyId="80" secondKeyId="91" status="HANDMADE" visibleModified="false"/>
+		<relation id="134" cardinality="M(b)" originalCardinality="M(b)" firstKeyId="98" secondKeyId="112" status="HANDMADE" visibleModified="false"/>
+		<relation id="135" cardinality="M(b)" originalCardinality="M(b)" firstKeyId="111" secondKeyId="28" status="HANDMADE" visibleModified="false"/>
+		<relation id="136" cardinality="M(a)" originalCardinality="M(a)" firstKeyId="59" secondKeyId="99" status="HANDMADE" visibleModified="false"/>
+	</jdbcSchema>
+	<dataset name="unitrap" centralTableId="15" optimiser="NONE" invisible="false" masked="false" hideMasked="false" indexOptimiser="false">
+		<subclassRelation relationId="134"/>
+		<subclassRelation relationId="135"/>
+		<renamedTable tableKey="gene" newName="gene"/>
+		<indexedColumn tableKey="gene" colKey="1.20.0.region_start"/>
+		<renamedColumn tableKey="gene" colKey="1.20.0.region_start" newName="gene_start"/>
+		<indexedColumn tableKey="gene" colKey="1.20.0.external_name"/>
+		<renamedColumn tableKey="gene" colKey="1.20.0.external_name" newName="marker_symbol"/>
+		<renamedColumn tableKey="gene" colKey="1.20.0.region_id" newName="region_id_1020_key"/>
+		<renamedColumn tableKey="gene" colKey="1.20.0.biotype" newName="biotype"/>
+		<indexedColumn tableKey="gene" colKey="1.20.0.region_end"/>
+		<renamedColumn tableKey="gene" colKey="1.20.0.region_end" newName="gene_end"/>
+		<indexedColumn tableKey="gene" colKey="1.20.0.seq_id"/>
+		<renamedColumn tableKey="gene" colKey="1.20.0.seq_id" newName="ensembl_gene_id"/>
+		<indexedColumn tableKey="gene" colKey="1.20.0.refseq_id"/>
+		<renamedColumn tableKey="gene" colKey="1.20.0.refseq_id" newName="refseq_id"/>
+		<maskedColumn tableKey="gene" colKey="1.20.0.parent_id"/>
+		<renamedColumn tableKey="gene" colKey="1.20.0.parent_id" newName="parent_id_1020"/>
+		<indexedColumn tableKey="gene" colKey="1.20.0.region_name"/>
+		<renamedColumn tableKey="gene" colKey="1.20.0.region_name" newName="chromosome"/>
+		<indexedColumn tableKey="gene" colKey="1.20.0.region_strand"/>
+		<renamedColumn tableKey="gene" colKey="1.20.0.region_strand" newName="strand"/>
+		<maskedColumn tableKey="gene" colKey="1.20.0.description"/>
+		<renamedColumn tableKey="gene" colKey="1.20.0.description" newName="description"/>
+		<maskedColumn tableKey="gene" colKey="1.20.0.rank"/>
+		<renamedColumn tableKey="gene" colKey="1.20.0.rank" newName="rank_1020"/>
+		<renamedTable tableKey="trap_unitrap__trapblock_annotation" newName="trapblock_annotation"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.rank" newName="exon_rank"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.22.0.region_id" newName="region_id_1022"/>
+		<maskedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.22.0.dS_s"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.22.0.dS_s" newName="dS_s_1022"/>
+		<maskedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.refseq_id"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.refseq_id" newName="refseq_id_108"/>
+		<maskedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.22.0.source_logic_name_id"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.22.0.source_logic_name_id" newName="source_logic_name_id_1022"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.22.0.rank" newName="unitrap_rank"/>
+		<maskedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.parent_id"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.parent_id" newName="parent_id_108"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.22.0.trapblock_annotation_id" newName="trapblock_annotation_id_1022"/>
+		<maskedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.description"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.description" newName="description_108"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.22.0.coverage" newName="coverage"/>
+		<indexedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.region_end"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.region_end" newName="exon_end"/>
+		<maskedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.region_strand"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.region_strand" newName="region_strand_108"/>
+		<maskedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.region_name"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.region_name" newName="region_name_108"/>
+		<maskedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.biotype"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.biotype" newName="biotype_108"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.22.0.comment" newName="comment"/>
+		<indexedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.seq_id"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.seq_id" newName="ensembl_exon_id"/>
+		<maskedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.external_name"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.external_name" newName="external_name_108"/>
+		<maskedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.22.0.label_logic_name_id"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.22.0.label_logic_name_id" newName="label_logic_name_id_1022"/>
+		<maskedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.22.0.display_name"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.22.0.display_name" newName="display_name_1022"/>
+		<indexedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.22.0.intronic"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.22.0.intronic" newName="intronic"/>
+		<maskedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.22.0.dE_e"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.22.0.dE_e" newName="dE_e_1022"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.22.0.flanking_exon_id" newName="flanking_exon_id_1022"/>
+		<indexedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.region_start"/>
+		<renamedColumn tableKey="trap_unitrap__trapblock_annotation" colKey="1.8.0.region_start" newName="exon_start"/>
+		<renamedTable tableKey="gene__unitrap" newName="unitrap"/>
+		<indexedColumn tableKey="gene__unitrap" colKey="marker_symbol"/>
+		<renamedColumn tableKey="gene__unitrap" colKey="1.15.0.hit_db" newName="assembly"/>
+		<renamedColumn tableKey="gene__unitrap" colKey="1.15.0.ambiguous" newName="ambiguous"/>
+		<indexedColumn tableKey="gene__unitrap" colKey="strand"/>
+		<indexedColumn tableKey="gene__unitrap" colKey="chromosome"/>
+		<maskedColumn tableKey="gene__unitrap" colKey="1.15.0.chr"/>
+		<renamedColumn tableKey="gene__unitrap" colKey="1.15.0.chr" newName="chromosome_c1"/>
+		<indexedColumn tableKey="gene__unitrap" colKey="1.15.0.end"/>
+		<renamedColumn tableKey="gene__unitrap" colKey="1.15.0.end" newName="unitrap_end"/>
+		<maskedColumn tableKey="gene__unitrap" colKey="rank_1020"/>
+		<maskedColumn tableKey="gene__unitrap" colKey="description"/>
+		<renamedColumn tableKey="gene__unitrap" colKey="1.15.0.unitrap_id" newName="unitrap_id_1015_key"/>
+		<indexedColumn tableKey="gene__unitrap" colKey="ensembl_gene_id"/>
+		<indexedColumn tableKey="gene__unitrap" colKey="gene_start"/>
+		<indexedColumn tableKey="gene__unitrap" colKey="gene_end"/>
+		<indexedColumn tableKey="gene__unitrap" colKey="1.15.0.start"/>
+		<renamedColumn tableKey="gene__unitrap" colKey="1.15.0.start" newName="unitrap_start"/>
+		<maskedColumn tableKey="gene__unitrap" colKey="parent_id_1020"/>
+		<indexedColumn tableKey="gene__unitrap" colKey="1.15.0.accession"/>
+		<renamedColumn tableKey="gene__unitrap" colKey="1.15.0.accession" newName="unitrap_accession_id"/>
+		<indexedColumn tableKey="gene__unitrap" colKey="refseq_id"/>
+		<renamedTable tableKey="unitrap__trap_unitrap" newName="trap_unitrap"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="1.2.0.clone"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.2.0.clone" newName="escell_clone"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="strand"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.11.0.trap_id" newName="trap_id_1011"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="chromosome"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.sequence" newName="sequence"/>
+		<maskedColumn tableKey="unitrap__trap_unitrap" colKey="chromosome_c1"/>
+		<maskedColumn tableKey="unitrap__trap_unitrap" colKey="description"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.2.0.vector_type" newName="vector_type"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="gene_start"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.mol_type"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.mol_type" newName="molecule_type"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="refseq_id"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="unitrap_accession_id"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.esclone_id" newName="esclone_id_1010"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.seq_length_not_N" newName="seq_length_not_n"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="1.2.0.cell_line"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.2.0.cell_line" newName="escell_line"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.gb_id"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.gb_id" newName="genbank_id"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.7.0.url" newName="project_url"/>
+		<maskedColumn tableKey="unitrap__trap_unitrap" colKey="1.7.0.private"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.7.0.private" newName="private_107"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="ensembl_gene_id"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="gene_end"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.x_masked_seq" newName="x_masked_seq"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="marker_symbol"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.7.0.note" newName="project_notes"/>
+		<maskedColumn tableKey="unitrap__trap_unitrap" colKey="1.7.0.wordkey"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.7.0.wordkey" newName="wordkey_107"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.n_percent_masked" newName="n_percent_masked"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.nrepeat" newName="nrepeat"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.xrepeat" newName="xrepeat"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="unitrap_start"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.seq_length" newName="seq_length"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="1.7.0.project_name"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.7.0.project_name" newName="project"/>
+		<maskedColumn tableKey="unitrap__trap_unitrap" colKey="rank_1020"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="unitrap_end"/>
+		<maskedColumn tableKey="unitrap__trap_unitrap" colKey="1.2.0.clone_genbank_id"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.2.0.clone_genbank_id" newName="clone_genbank_id_102"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.max_frag_length_N_splitted" newName="max_frag_length_n_splitted"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.trap_name" newName="trap_name"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.11.0.trapblock_id" newName="trapblock_id_1011"/>
+		<maskedColumn tableKey="unitrap__trap_unitrap" colKey="parent_id_1020"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="1.2.0.design_type"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.2.0.design_type" newName="design_type"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="1.2.0.strain"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.2.0.strain" newName="escell_strain"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.11.0.trap_unitrap_id" newName="trap_unitrap_id_1011_key"/>
+		<maskedColumn tableKey="unitrap__trap_unitrap" colKey="1.2.0.project_id"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.2.0.project_id" newName="project_id_102"/>
+		<maskedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.paired_tag_id"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.paired_tag_id" newName="paired_tag_id_1010"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.x_percent_masked" newName="x_percent_masked"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.2.0.vector_name" newName="vector_name"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.sequencing_direction" newName="sequencing_direction"/>
+		<maskedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.timestp"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.timestp" newName="timestp_1010"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.gb_locus"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.gb_locus" newName="genbank_accession_id"/>
+		<indexedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.gss_id"/>
+		<renamedColumn tableKey="unitrap__trap_unitrap" colKey="1.10.0.gss_id" newName="dbgss_id"/>
+	</dataset>
+</mart>
