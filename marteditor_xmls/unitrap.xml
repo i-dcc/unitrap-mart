@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE DatasetConfig>
-<DatasetConfig dataset="unitrap" datasetID="1" displayName="UniTrap" interfaces="default" internalName="default" martUsers="default" modified="2010-10-14 12:19:52" softwareVersion="0.6" template="unitrap" type="TableSet" visible="1">
+<DatasetConfig dataset="unitrap" datasetID="1" displayName="UniTrap" interfaces="default" internalName="default" martUsers="default" modified="2010-11-12 11:12:40" softwareVersion="0.6" template="unitrap" type="TableSet" visible="1">
   <MainTable>unitrap__gene__main</MainTable>
   <MainTable>unitrap__unitrap__main</MainTable>
   <MainTable>unitrap__trap_unitrap__main</MainTable>
@@ -48,6 +48,7 @@
           <Option displayName="18" internalName="18" isSelectable="true" value="18"/>
           <Option displayName="19" internalName="19" isSelectable="true" value="19"/>
           <Option displayName="X" internalName="X" isSelectable="true" value="X"/>
+          <Option displayName="Y" internalName="Y" isSelectable="true" value="Y"/>
         </FilterDescription>
       </FilterCollection>
       <FilterCollection displayName="Gene Start" internalName="gene_start">
