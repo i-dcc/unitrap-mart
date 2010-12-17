@@ -79,24 +79,34 @@
       </FilterCollection>
       <FilterCollection displayName="Project" internalName="project">
         <FilterDescription displayName="Project" displayType="list" field="project" internalName="project" key="trap_unitrap_id_1011_key" legal_qualifiers="=" multipleValues="1" qualifier="=" style="menu" tableConstraint="main" type="list">
-          <Option displayName="TIGEM" internalName="TIGEM" isSelectable="true" value="TIGEM"/>
+          <Option displayName="CMHD" internalName="CMHD" isSelectable="true" value="CMHD"/>
+          <Option displayName="ESCells" internalName="ESCells" isSelectable="true" value="ESCells"/>
+          <Option displayName="EUCOMM" internalName="EUCOMM" isSelectable="true" value="EUCOMM"/>
+          <Option displayName="Stanford" internalName="Stanford" isSelectable="true" value="Stanford"/>
           <Option displayName="TIGM" internalName="TIGM" isSelectable="true" value="TIGM"/>
-          <Option displayName="WTSI" internalName="WTSI" isSelectable="true" value="WTSI"/>
         </FilterDescription>
       </FilterCollection>
       <FilterCollection displayName="Design Type" internalName="design_type">
         <FilterDescription displayName="Design type" displayType="list" field="design_type" internalName="design_type" key="trap_unitrap_id_1011_key" legal_qualifiers="=" multipleValues="1" qualifier="=" style="menu" tableConstraint="main" type="list">
           <Option displayName="3' RACE" internalName="3'_RACE" isSelectable="true" value="3' RACE"/>
           <Option displayName="5' RACE" internalName="5'_RACE" isSelectable="true" value="5' RACE"/>
+          <Option displayName="3splk" internalName="3splk" isSelectable="true" value="3splk"/>
+          <Option displayName="5splk" internalName="5splk" isSelectable="true" value="5splk"/>
+          <Option displayName="Inverse PCR" internalName="Inverse_PCR" isSelectable="true" value="Inverse PCR"/>
+          <Option displayName="Left" internalName="Left" isSelectable="true" value="Left"/>
+          <Option displayName="Right" internalName="Right" isSelectable="true" value="Right"/>
         </FilterDescription>
       </FilterCollection>
       <FilterCollection displayName="ES Cell Line" internalName="escell_line">
         <FilterDescription displayName="ES Cell Line" displayType="list" field="escell_line" internalName="escell_line" key="trap_unitrap_id_1011_key" legal_qualifiers="=" multipleValues="1" qualifier="=" style="menu" tableConstraint="main" type="list">
-          <Option displayName="E14Tg2A.4" internalName="E14Tg2A.4" isSelectable="true" value="E14Tg2A.4"/>
+          <Option displayName="Embryonic Stem Cell" internalName="Embryonic_Stem_Cell" isSelectable="true" value="Embryonic Stem Cell"/>
+          <Option displayName="R1" internalName="R1" isSelectable="true" value="R1"/>
         </FilterDescription>
       </FilterCollection>
       <FilterCollection displayName="ES Cell Strain" internalName="escell_strain">
-        <FilterDescription displayName="ES Cell Strain" displayType="list" field="escell_strain" internalName="escell_strain" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" style="menu" tableConstraint="main" type="list"/>
+        <FilterDescription displayName="ES Cell Strain" displayType="list" field="escell_strain" internalName="escell_strain" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" style="menu" tableConstraint="main" type="list">
+          <Option displayName="129S3" internalName="129S3" isSelectable="true" value="129S3"/>
+        </FilterDescription>
       </FilterCollection>
       <FilterCollection displayName="ES Cell Clone" internalName="escell_clone">
         <FilterDescription displayName="ES Cell Clone" displayType="text" field="escell_clone" internalName="escell_clone" key="trap_unitrap_id_1011_key" legal_qualifiers="=" multipleValues="1" qualifier="=" tableConstraint="main" type="text"/>
@@ -162,7 +172,6 @@
         <AttributeDescription displayName="UniTrap Start" field="unitrap_start" internalName="unitrap_start" key="unitrap_id_1015_key" maxLength="10" tableConstraint="main"/>
         <AttributeDescription displayName="UniTrap End" field="unitrap_end" internalName="unitrap_end" key="unitrap_id_1015_key" maxLength="10" tableConstraint="main"/>
         <AttributeDescription displayName="Number of Traps" field="trap_unitrap_count" internalName="no_of_traps" key="unitrap_id_1015_key" maxLength="10" tableConstraint="main"/>
-        <AttributeDescription displayName="Intronic?" field="intronic" internalName="intronic" key="trap_unitrap_id_1011_key" maxLength="0" tableConstraint="trapblock_annotation__dm"/>
         <AttributeDescription displayName="dbGSS ID" field="dbgss_id" internalName="dbgss_id" key="trap_unitrap_id_1011_key" linkoutURL="http://www.ncbi.nlm.nih.gov/nucgss/%s" maxLength="10" tableConstraint="main"/>
         <AttributeDescription default="true" displayName="GenBank ID" field="genbank_id" internalName="genbank_id" key="trap_unitrap_id_1011_key" linkoutURL="http://www.ncbi.nlm.nih.gov/nucgss/%s" maxLength="10" tableConstraint="main"/>
         <AttributeDescription default="true" displayName="GenBank Accession ID" field="genbank_accession_id" internalName="genbank_accession_id" key="trap_unitrap_id_1011_key" maxLength="30" tableConstraint="main"/>

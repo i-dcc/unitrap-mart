@@ -36,12 +36,13 @@ where unitrap.end = 0
 ;
 
 # Replace NA's/blanks with NULL
-update region  set `refseq_id`   = null where `refseq_id`   in ( 'NA', 'na', '' );
-update trap    set `gb_locus`    = null where `gb_locus`    in ( 'NA', 'na', '' );
-update trap    set `gb_id`       = null where `gb_id`       = 0;
-update trap    set `gss_id`      = null where `gss_id`      = 0;
-update esclone set `strain`      = null where `strain`      in ( 'NA', 'na', '' );
-update esclone set `design_type` = null where `design_type` in ( 'NA', 'na', '' );
+update region               set `refseq_id`        = null where `refseq_id`        in ( 'NA', 'na', '' );
+update trap                 set `gb_locus`         = null where `gb_locus`         in ( 'NA', 'na', '' );
+update trap                 set `gb_id`            = null where `gb_id`            = 0;
+update trap                 set `gss_id`           = null where `gss_id`           = 0;
+update esclone              set `strain`           = null where `strain`           in ( 'NA', 'na', '' );
+update esclone              set `design_type`      = null where `design_type`      in ( 'NA', 'na', '' );
+update trapblock_annotation set `flanking_exon_id` = null where `flanking_exon_id` = 0;
 
 # Update the project names
 update project set `project_name` = 'EGTC' where `project_name` = 'egtc';
@@ -56,3 +57,4 @@ update project set `project_name` = 'Lexicon' where `project_name` = 'lexicon';
 update project set `project_name` = 'Vanderbilt' where `project_name` = 'vanderbilt';
 update project set `project_name` = 'NAISTRAP' where `project_name` = 'naistrap';
 update project set `project_name` = 'TIGM' where `project_name` = 'tigm';
+update project set `project_name` = 'CMHD' where `project_name` = 'cmhd';
