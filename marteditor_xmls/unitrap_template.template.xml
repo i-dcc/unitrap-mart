@@ -80,7 +80,7 @@
       <FilterCollection displayName="Project" internalName="project">
         <FilterDescription displayName="Project" displayType="list" field="project" internalName="project" key="trap_unitrap_id_1011_key" legal_qualifiers="=" multipleValues="1" qualifier="=" style="menu" tableConstraint="main" type="list">
           <Option displayName="CMHD" internalName="CMHD" isSelectable="true" value="CMHD"/>
-          <Option displayName="ESCells" internalName="ESCells" isSelectable="true" value="ESCells"/>
+          <Option displayName="ESDB" internalName="ESDB" isSelectable="true" value="ESDB"/>
           <Option displayName="EUCOMM" internalName="EUCOMM" isSelectable="true" value="EUCOMM"/>
           <Option displayName="Stanford" internalName="Stanford" isSelectable="true" value="Stanford"/>
           <Option displayName="TIGM" internalName="TIGM" isSelectable="true" value="TIGM"/>
@@ -99,13 +99,19 @@
       </FilterCollection>
       <FilterCollection displayName="ES Cell Line" internalName="escell_line">
         <FilterDescription displayName="ES Cell Line" displayType="list" field="escell_line" internalName="escell_line" key="trap_unitrap_id_1011_key" legal_qualifiers="=" multipleValues="1" qualifier="=" style="menu" tableConstraint="main" type="list">
-          <Option displayName="Embryonic Stem Cell" internalName="Embryonic_Stem_Cell" isSelectable="true" value="Embryonic Stem Cell"/>
+          <Option displayName="E14Tg2a" internalName="E14Tg2a" isSelectable="true" value="E14Tg2a"/>
+          <Option displayName="E14Tg2a.4" internalName="E14Tg2a.4" isSelectable="true" value="E14Tg2a.4"/>
+          <Option displayName="JM8" internalName="JM8" isSelectable="true" value="JM8"/>
+          <Option displayName="Lex3.13" internalName="Lex3.13" isSelectable="true" value="Lex3.13"/>
           <Option displayName="R1" internalName="R1" isSelectable="true" value="R1"/>
         </FilterDescription>
       </FilterCollection>
       <FilterCollection displayName="ES Cell Strain" internalName="escell_strain">
         <FilterDescription displayName="ES Cell Strain" displayType="list" field="escell_strain" internalName="escell_strain" key="trap_unitrap_id_1011_key" legal_qualifiers="=" qualifier="=" style="menu" tableConstraint="main" type="list">
+          <Option displayName="129 sv" internalName="129_sv" isSelectable="true" value="129 sv"/>
+          <Option displayName="129P2/OlaHsd" internalName="129P2/OlaHsd" isSelectable="true" value="129P2/OlaHsd"/>
           <Option displayName="129S3" internalName="129S3" isSelectable="true" value="129S3"/>
+          <Option displayName="C57Bl/6N" internalName="C57Bl/6N" isSelectable="true" value="C57Bl/6N"/>
         </FilterDescription>
       </FilterCollection>
       <FilterCollection displayName="ES Cell Clone" internalName="escell_clone">
@@ -168,7 +174,7 @@
         <AttributeDescription displayName="Exon Rank" field="exon_rank" internalName="exon_rank" key="trap_unitrap_id_1011_key" maxLength="10" tableConstraint="trapblock_annotation__dm"/>
       </AttributeCollection>
       <AttributeCollection displayName="Trap Overview" enableSelectAll="true" internalName="trap_overview" maxSelect="0">
-        <AttributeDescription default="true" displayName="UniTrap Accession ID" field="unitrap_accession_id" internalName="unitrap_accession_id" key="unitrap_id_1015_key" linkoutURL="http://www.knockoutmouse.org/martsearch/search?query=%s" maxLength="40" tableConstraint="main"/>
+        <AttributeDescription default="true" displayName="UniTrap Accession ID" field="unitrap_accession_id" internalName="unitrap_accession_id" key="unitrap_id_1015_key" maxLength="40" tableConstraint="main"/>
         <AttributeDescription displayName="UniTrap Start" field="unitrap_start" internalName="unitrap_start" key="unitrap_id_1015_key" maxLength="10" tableConstraint="main"/>
         <AttributeDescription displayName="UniTrap End" field="unitrap_end" internalName="unitrap_end" key="unitrap_id_1015_key" maxLength="10" tableConstraint="main"/>
         <AttributeDescription displayName="Number of Traps" field="trap_unitrap_count" internalName="no_of_traps" key="unitrap_id_1015_key" maxLength="10" tableConstraint="main"/>

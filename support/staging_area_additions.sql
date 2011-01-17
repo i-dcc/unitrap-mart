@@ -52,7 +52,6 @@ update project set `project_name` = 'WTSI' where `project_name` = 'sanger';
 update project set `project_name` = 'Bay Genomics' where `project_name` = 'baygenomics';
 update project set `project_name` = 'GGTC' where `project_name` = 'ggtc';
 update project set `project_name` = 'FHCRC' where `project_name` = 'fhcrc';
-update project set `project_name` = 'ESCells' where `project_name` = 'escells';
 update project set `project_name` = 'Lexicon' where `project_name` = 'lexicon';
 update project set `project_name` = 'Vanderbilt' where `project_name` = 'vanderbilt';
 update project set `project_name` = 'NAISTRAP' where `project_name` = 'naistrap';
