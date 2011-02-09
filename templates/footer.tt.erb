@@ -5,10 +5,20 @@
   <span class="contact">
     If you have any suggestions for improvements to this system or <br />
     would like to submit a bug report, please <a href="mailto:htgt@sanger.ac.uk">get in touch</a>.
-   </span>
-   <span class="credit">
-     <% dt = Time.now %>
-     Powered by biomart (v0.7)<br />
-     Data last updated on <%= dt.strftime("%m/%d/%Y at %I:%M%p") %>
-   </span>
+  </span>
+  <span class="credit">
+    <%
+      dt    = Time.now
+      stamp = CURRENT_DB["#{@@environment}_timestamp"]
+      unless stamp.nil?
+        if /^1\.8/ === RUBY_VERSION
+          dt = Time.utc(stamp['year'],stamp['month'],stamp['day'],stamp['hour'],stamp['minute'],stamp['second'],stamp['offset'])
+        else
+          dt = Time.new(stamp['year'],stamp['month'],stamp['day'],stamp['hour'],stamp['minute'],stamp['second'],stamp['offset'])
+        end
+      end
+    %>
+    Powered by biomart (v0.7)<br />
+    Data last updated on <%= dt.strftime("%m/%d/%Y at %I:%M%p") %>
+  </span>
 </div>
