@@ -57,3 +57,11 @@ update project set `project_name` = 'Vanderbilt' where `project_name` = 'vanderb
 update project set `project_name` = 'NAISTRAP' where `project_name` = 'naistrap';
 update project set `project_name` = 'TIGM' where `project_name` = 'tigm';
 update project set `project_name` = 'CMHD' where `project_name` = 'cmhd';
+update project set `project_name` = 'ESCells' where `project_name` = 'escells';
+update project set `project_name` = 'Katharina' where `project_name` = 'katharina';
+update project set `project_name` = 'Osborn T.C.' where `project_name` = 'osborn,t.c.';
+update project set `project_name` = 'Paterson' where `project_name` = 'paterson';
+update project set `project_name` = 'Pauls' where `project_name` = 'pauls,';
+update project set `project_name` = 'Murray' where `project_name` = 'murray,';
+update project set `project_name` = 'Larsen' where `project_name` = 'larsen,';
+
