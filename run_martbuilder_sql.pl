@@ -46,6 +46,10 @@ open(FILE,"martbuilder.sql");
 while (<FILE>) { $sql .= $_; }
 close(FILE);
 
+if ( $ENVIRONMENT eq "production" ) {
+  $sql =~ s/ikmc_unitrap/biomart_unitrap/g;
+}
+
 if ( $DB_TO_USE eq "alt" ) {
   my $standard_db = $MARTDB_CONF->{$ENVIRONMENT}->{'databases'}->[0]->{'standard'}->{'database'};
   my $alt_db      = $MARTDB_CONF->{$ENVIRONMENT}->{'databases'}->[0]->{'alt'}->{'database'};
