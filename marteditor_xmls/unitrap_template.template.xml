@@ -153,7 +153,7 @@
       </FilterCollection>
     </FilterGroup>
   </FilterPage>
-  <AttributePage displayName="Attributes" internalName="attributes" outFormats="html,txt,csv,tsv">
+  <AttributePage displayName="Attributes" internalName="attributes" outFormats="html,txt,csv,tsv,xls">
     <AttributeGroup displayName="Features" internalName="features">
       <AttributeCollection displayName="Gene Information" enableSelectAll="true" internalName="gene_information" maxSelect="0">
         <AttributeDescription default="true" displayName="Marker Symbol" field="marker_symbol" internalName="marker_symbol" key="region_id_1020_key" linkoutURL="http://www.knockoutmouse.org/search_results?criteria=%s" maxLength="255" tableConstraint="main"/>
@@ -208,7 +208,7 @@
       </AttributeCollection>
     </AttributeGroup>
   </AttributePage>
-  <AttributePage displayName="Unused Attributes" hidden="true" hideDisplay="true" internalName="unused_attributes" outFormats="html,txt,csv,tsv">
+  <AttributePage displayName="Unused Attributes" hidden="true" hideDisplay="true" internalName="unused_attributes" outFormats="html,txt,csv,tsv,xls">
     <AttributeGroup displayName="FEATURES" hidden="true" hideDisplay="true" internalName="features">
       <AttributeCollection displayName="gene" hidden="true" hideDisplay="true" internalName="gene">
         <AttributeDescription displayName="Unitrap count" field="unitrap_count" hidden="true" hideDisplay="true" internalName="unitrap_count" key="region_id_1020_key" maxLength="10" tableConstraint="main"/>

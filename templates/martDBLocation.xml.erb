@@ -8,8 +8,8 @@
         databaseType    = "mysql" 
         host            = "<%= db['host'] %>" 
         port            = "<%= db['port'] %>" 
-        database        = "<%= db[@@db_to_use]['database'] %>" 
-        schema          = "<%= db[@@db_to_use]['database'] %>" 
+        database        = "<%= db[@db_to_use]['database'] %>" 
+        schema          = "<%= db[@db_to_use]['database'] %>" 
         user            = "<%= db['user'] %>" 
         password        = "<%= db['password'] %>" 
         visible         = "1" 
@@ -19,10 +19,10 @@
     />
   <% end %>
     <MartURLLocation 
-      name                = "ensembl" 
+      name                = "ENSEMBL_MART_ENSEMBL" 
       default             = "" 
       displayName         = "Ensembl Gene (Sanger UK)" 
-      host                = "www.biomart.org"
+      host                = "www.ensembl.org" 
       <% if MART_CONFIG['http_proxy'] %>proxy = "<%= MART_CONFIG['http_proxy'] %>"<% end %>
       includeDatasets     = "mmusculus_gene_ensembl" 
       martUser            = "" 
@@ -32,10 +32,10 @@
       visible             = "1" 
     />
     <MartURLLocation 
-      name                = "sequence" 
+      name                = "ENSEMBL_MART_SEQUENCE" 
       default             = "" 
       displayName         = "Ensembl Sequence (Sanger UK)" 
-      host                = "www.biomart.org" 
+      host                = "www.ensembl.org" 
       <% if MART_CONFIG['http_proxy'] %>proxy = "<%= MART_CONFIG['http_proxy'] %>"<% end %>
       includeDatasets     = "mmusculus_genomic_sequence" 
       martUser            = "" 
@@ -45,12 +45,12 @@
       visible             = "" 
     />
     <MartURLLocation 
-      name                = "ontology" 
+      name                = "ENSEMBL_MART_ONTOLOGY" 
       default             = "" 
       displayName         = "Ensembl Ontology (Sanger UK)" 
-      host                = "www.biomart.org" 
+      host                = "www.ensembl.org" 
       <% if MART_CONFIG['http_proxy'] %>proxy = "<%= MART_CONFIG['http_proxy'] %>"<% end %>
-      includeDatasets     = "closure_biological_process,closure_cellular_component,closure_molecular_function" 
+      includeDatasets     = "closure_GO,closure_EFO,closure_SO" 
       martUser            = "" 
       path                = "/biomart/martservice" 
       port                = "80" 
@@ -58,23 +58,23 @@
       visible             = "" 
     />
     <MartURLLocation 
-      name                = "genomic_features" 
+      name                = "ENSEMBL_MART_GENOMIC" 
       default             = "" 
       displayName         = "Ensembl Genomic Features (Sanger UK)" 
-      host                = "www.biomart.org" 
+      host                = "www.ensembl.org" 
       <% if MART_CONFIG['http_proxy'] %>proxy = "<%= MART_CONFIG['http_proxy'] %>"<% end %>
       includeDatasets     = "mmus_karyotype_start,mmus_karyotype_end,mmus_marker_start,mmus_marker_end" 
-      martUser            = "" 
+      martUser            = ""
       path                = "/biomart/martservice" 
       port                = "80" 
       serverVirtualSchema = "default" 
       visible             = "" 
     />
     <MartURLLocation 
-      name                = "vega" 
+      name                = "ENSEMBL_MART_VEGA" 
       default             = "" 
       displayName         = "Vega (Sanger UK)" 
-      host                = "www.biomart.org" 
+      host                = "www.ensembl.org" 
       <% if MART_CONFIG['http_proxy'] %>proxy = "<%= MART_CONFIG['http_proxy'] %>"<% end %>
       includeDatasets     = "mmusculus_gene_vega" 
       martUser            = "" 
@@ -84,3 +84,4 @@
       visible             = "1" 
     />
 </MartRegistry>
+    

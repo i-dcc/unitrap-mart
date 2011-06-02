@@ -1,4 +1,4 @@
-production:
+unitrap_mart_helmholtz_production:
   apachectl: /usr/sbin/apache2ctl
   port: 8080
   proxy: 80
@@ -8,10 +8,10 @@ production:
   databases:
     - name: ikmc_unitrap
       display_name: "IKMC UniTrap"
-      host: 
-      port: 
-      user: 
-      password: 
+      host: localhost
+      port: 3306
+      user: biomart
+      password: biomart
       staging_db: biomart_unitrapcore
       standard: 
         database: biomart_unitrap_mart
@@ -21,19 +21,19 @@ production:
     
   
 
-test:
+unitrap_mart_htgt_test:
   apachectl: /software/team87/brave_new_world/app/httpd-2.2.14/bin/apachectl
-  port: 3010
+  port: 9013
   http_proxy: http://wwwcache.sanger.ac.uk:3128
   location: biomart
   logger: "INFO,logFile"
   databases:
     - name: ikmc_unitrap
       display_name: "IKMC UniTrap"
-      host: 
-      port: 
-      user: 
-      password: 
+      host: mcs4a.internal.sanger.ac.uk
+      port: 3307
+      user: ikmc
+      password: ikmc
       staging_db: ikmc_unitrapcore
       standard: 
         database: ikmc_unitrap_mart

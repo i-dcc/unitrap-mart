@@ -9,7 +9,7 @@
   <span class="credit">
     <%
       dt    = Time.now
-      stamp = CURRENT_DB["#{@@environment}_timestamp"]
+      stamp = REBUILD_TIMESTAMP
       unless stamp.nil?
         if /^1\.8/ === RUBY_VERSION
           dt = Time.utc(stamp['year'],stamp['month'],stamp['day'],stamp['hour'],stamp['minute'],stamp['second'],stamp['offset'])

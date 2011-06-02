@@ -153,7 +153,7 @@ from=htgt@sanger.ac.uk
 [sessions]
 expire=1d
 driver=mysql
-dsn=dbi:mysql:database=<%= DB_CONFIG[0][@@db_to_use]['database'] %>;host=<%= DB_CONFIG[0]['host'] %>;port=<%= DB_CONFIG[0]['port'] %>
+dsn=dbi:mysql:database=<%= DB_CONFIG[0][@db_to_use]['database'] %>;host=<%= DB_CONFIG[0]['host'] %>;port=<%= DB_CONFIG[0]['port'] %>
 user=<%= DB_CONFIG[0]['user'] %>
 pass=<%= DB_CONFIG[0]['password'] %>
 

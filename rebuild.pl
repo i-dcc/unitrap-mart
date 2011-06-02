@@ -13,27 +13,28 @@ use YAML;
 ## Get command-line args...
 ##
 
-my $production;
-my $dryrun;
+my $ENVIRONMENT = undef;
+my $DRYRUN      = undef;
 
 GetOptions(
-    'production|p' => \$production,
-    'dryrun'       => \$dryrun
+    'environment|e=s' => \$ENVIRONMENT,
+    'dryrun'          => \$DRYRUN
 );
 
-my $ENVIRONMENT = 'test';
-$ENVIRONMENT = 'production' if $production;
+die "You must specify an --environment option to determine which mart database to write to!" unless $ENVIRONMENT;
 
 ##
 ## Set-up the options for the program...
 ##
 
 my $INSTALL_LOCATION = {
-    production => '/opt/biomart',
-    test       => '/nfs/team87/services/biomart/unitrap_mart/test'
+    unitrap_mart_helmholtz_production => '/opt/biomart',
+    unitrap_mart_htgt_test            => '/nfs/team87/services/biomart/unitrap-mart/test'
 };
+my $rebuild_dir = $INSTALL_LOCATION->{$ENVIRONMENT} . '/rebuild/current';
+my $server_dir  = $INSTALL_LOCATION->{$ENVIRONMENT} . '/server/current';
 
-my $MARTDB_CONF = YAML::LoadFile($INSTALL_LOCATION->{$ENVIRONMENT}.'/rebuild/settings.yml')->{$ENVIRONMENT} or die "Unable to read settings.yml";
+my $MARTDB_CONF = YAML::LoadFile("$rebuild_dir/settings.yml")->{$ENVIRONMENT} or die "Unable to read settings.yml";
 my $host        = $MARTDB_CONF->{'databases'}->[0]->{'host'};
 my $port        = $MARTDB_CONF->{'databases'}->[0]->{'port'};
 my $staging_db  = $MARTDB_CONF->{'databases'}->[0]->{'staging_db'};
@@ -43,34 +44,30 @@ my $pass        = $MARTDB_CONF->{'databases'}->[0]->{'password'};
 my $REBUILD_COMMANDS = [
     "/usr/bin/env mysql -u $user --password=$pass -h $host -P $port $staging_db < support/create_or_replace_index_procedure.sql",
     "/usr/bin/env mysql -u $user --password=$pass -h $host -P $port $staging_db < support/staging_area_additions.sql",
-    'perl run_martbuilder_sql.pl'
+    "ruby run_sql_script.rb --environment $ENVIRONMENT --file martbuilder.sql --update_timestamp"
 ];
-my $SERVER_COMMANDS  = [ 'ruby server.rb --stop --reconfigure --switch_conf --start' ];
+my $SERVER_COMMANDS  = [
+  "ruby server.rb --environment $ENVIRONMENT --rebuilddir $rebuild_dir --stop --switch_conf --reconfigure --start"
+];
 
 ##
 ## Run the rebuild...
 ##
 
-my $rebuild_dir = $INSTALL_LOCATION->{$ENVIRONMENT} . '/rebuild';
-my $server_dir  = $INSTALL_LOCATION->{$ENVIRONMENT} . '/server';
-
 print "Rebuilding into $ENVIRONMENT environment...\n";
 
 print " - moving to $rebuild_dir \n";
 chdir $rebuild_dir or die "[ERROR] Unable to chdir to $rebuild_dir - $! \n";
-run_jobs( $REBUILD_COMMANDS, $production, $dryrun );
+run_jobs( $REBUILD_COMMANDS, $DRYRUN );
 
 print " - moving to $server_dir \n";
 chdir $server_dir or die "[ERROR] Unable to chdir to $server_dir - $! \n";
-run_jobs( $SERVER_COMMANDS, $production, $dryrun );
+run_jobs( $SERVER_COMMANDS, $DRYRUN );
 
 sub run_jobs {
-    my ( $jobs, $production, $dryrun ) = @_;
+    my ( $jobs, $dryrun ) = @_;
     
     foreach my $job ( @{$jobs} ) {
-        unless ( $job =~ m|^/usr/bin/env mysql| or $job =~ /^mysql/ ) {
-            $job .= ' --production' if $production;
-        }
         print " - running '$job'\n";
         
         unless ( $dryrun ) {

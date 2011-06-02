@@ -117,7 +117,7 @@
       </FilterCollection>
     </FilterGroup>
   </FilterPage>
-  <AttributePage displayName="Attributes" internalName="attributes" outFormats="html,txt,csv,tsv">
+  <AttributePage displayName="Attributes" internalName="attributes" outFormats="html,txt,csv,tsv,xls">
     <AttributeGroup displayName="Features" internalName="features">
       <AttributeCollection displayName="Gene Information" enableSelectAll="true" internalName="gene_information" maxSelect="0">
         <AttributeDescription default="true" displayName="Marker Symbol" field="marker_symbol" internalName="marker_symbol" key="region_id_1020_key" linkoutURL="http://www.knockoutmouse.org/search_results?criteria=%s" maxLength="255" tableConstraint="main"/>
