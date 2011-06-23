@@ -73,7 +73,9 @@ pass = MART_CONFIG['databases'][0]['password']
 command = "/usr/bin/env mysql -u #{user} --password=#{pass} -h #{host} -P #{port} #{db} < sql_to_run.sql"
 
 puts "Running: '#{command}'"
-system(command)
+unless system(command)
+  raise "Error running SQL command!!! '#{command}' - #{$!}"
+end
 
 ##
 ## Finally, do we need to update the timestamp on the mart?
